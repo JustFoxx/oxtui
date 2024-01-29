@@ -1,5 +1,11 @@
-use oxtui::crunch;
+use std::io::{BufWriter, Stdout};
+use oxtui::TerminalBuilder;
 
 fn main() {
-    crunch()
+    let terminal = TerminalBuilder::default()
+        .title("Hello, World!")
+        .raw_mode()
+        .alternative_mode()
+        .build();
+
 }
